@@ -1,1 +1,0 @@
-data class MyWord(val word: String, var count:Int = 1)
