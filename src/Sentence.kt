@@ -10,6 +10,7 @@ object Sentence{
         this.sort()
         this.printUnique()
         this.countWords()
+        this.sortByCount()
         println()
         println("Done!")
     }
@@ -42,6 +43,13 @@ object Sentence{
         println("Add count on words")
         wordsCollection = words.sorted().groupingBy { it }.eachCount()
         this.printMap(wordsCollection)
+    }
+
+    //Сортирую по счетчику, а затем по алфавиту
+    private fun sortByCount(){
+        println("Task 5")
+        println("Sorted by count")
+        printMap(wordsCollection.toList().sortedByDescending { (key, value) -> value }.toMap())
     }
 
     // Вывод списка
