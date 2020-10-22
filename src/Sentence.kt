@@ -56,7 +56,6 @@ object Sentence{
     private fun printList(value:List<String>){
         value.forEach(::println)
     }
-
     // Вывод Map
     private fun printMap(value: Map<String, Int>) {
         value.forEach{
