@@ -1,19 +1,6 @@
 class Sentence{
-    private var _newSentence = "the quick brown fox jumps over the lazy dog"
-    var newSentence
-        get() = _newSentence
-        set(value) {
-            if (!value.trimMargin().isNullOrEmpty()) {
-                _newSentence = value
-            }
-        }
-
-    private  var _words: MutableList<MyWord> = mutableListOf()
-    var words
-        get() = _words
-        set(value) {
-            _words = value
-        }
+    var newSentence = "the quick brown fox jumps over the lazy dog"
+    private  var words: MutableList<MyWord> = mutableListOf()
 
     fun doTestTask(){
         this.toWords()
@@ -76,6 +63,4 @@ class Sentence{
             println("${element.word} ${element.count}")
         }
     }
-
-    constructor()
 }
