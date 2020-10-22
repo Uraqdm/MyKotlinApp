@@ -9,6 +9,8 @@ object Sentence{
         this.toWords()
         this.sort()
         this.printUnique()
+        this.countWords()
+        this.sortByCount()
         println()
         println("Done!")
     }
@@ -33,6 +35,14 @@ object Sentence{
         println("Task 3")
         println("Sorted list of unique words")
         this.printList(words.toSet().sorted())
+    }
+
+    //Считаю повторяющиеся слова
+    private fun countWords(){
+        println("Task 4")
+        println("Add count on words")
+        wordsCollection = words.sorted().groupingBy { it }.eachCount()
+        this.printMap(wordsCollection)
     }
 
     // Вывод списка
