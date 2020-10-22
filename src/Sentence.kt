@@ -2,6 +2,7 @@ class Sentence{
     var newSentence = "the quick brown fox jumps over the lazy dog"
     private  var words: MutableList<MyWord> = mutableListOf()
 
+    //Публичная функция для выполнения приватных методов по работе со строками
     fun doTestTask(){
         this.toWords()
         this.findUnique()
@@ -9,6 +10,7 @@ class Sentence{
         this.printing()
     }
 
+    //Разбиение полученной строки со словами на отдельные слова
     private fun  toWords(){
         var tempWord = ""
         this.newSentence += ' '
@@ -22,7 +24,7 @@ class Sentence{
             }
         }
     }
-
+    //Сортировка сначала по количеству повторений, а затем по алфавиту
     private fun sort() {
         for (i in 0 until this.words.size) {
             for (j in 0 until this.words.size) {
@@ -40,7 +42,7 @@ class Sentence{
         }
 
     }
-
+    //удаление повторяющихся элементов и их подсчет
     private fun findUnique(){
         var temp: MutableList<MyWord> = mutableListOf()
         for (i in 0 until this.words.size) {
@@ -58,6 +60,7 @@ class Sentence{
         }
     }
 
+    //Вывод words
     private fun printing(){
         for(element in words){
             println("${element.word} ${element.count}")
