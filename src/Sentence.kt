@@ -10,7 +10,6 @@ object Sentence{
         this.sort()
         this.printUnique()
         this.countWords()
-        this.sortByCount()
         println()
         println("Done!")
     }
